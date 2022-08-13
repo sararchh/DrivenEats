@@ -168,6 +168,120 @@ body {
   border: 3px solid #32B72F;
 }
 
+.showModal {
+  display: flex !important;
+}
+
+.modalOrder {
+  max-width: 414px;
+  width: 414px;
+  height: 100%;
+  background-color: #EEEEEE98 ;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: 9;
+
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardOrder {
+  max-width: 377px;
+  width: 377px;
+  height: 353px;
+
+  z-index: 10;
+
+  padding: 19px;
+  border-radius: 9px;
+
+  color: #FFFFFF;
+  background-color: #50D074;
+}
+
+.cardOrder h3{
+  text-align: center;
+  line-height: 25.78px;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 30px;
+}
+
+.cardOrder div {
+  display: flex;
+  margin: 17px 0;
+  justify-content: space-between;
+}
+
+.cardOrder p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25.78px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.cardOrder span {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25.78px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.total h4 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 25.78px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.total span {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 25.78px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.buttonConfirm {
+  width: 329px;
+  height: 52px;
+
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.buttonConfirm h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #50D074;
+}
+
+.buttonCancel {
+  width: 329px;
+  height: 43px;
+
+  cursor: pointer;
+
+  border: none;
+  background-color: transparent;
+}
+
+.buttonCancel h4 {
+  text-align: center;
+  color: #FFFFFF;
+
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 23.44px;
+  font-family: 'Roboto', sans-serif;
+}
+
 .footer {
   max-width: 414px;
   width: 414px;

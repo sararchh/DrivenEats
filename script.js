@@ -67,11 +67,19 @@ function selectedCandy(elementSelected) {
 }
 
 function verifyButtonActive() {
-  const buttonFooter = document.querySelector('.button01') ;
-  console.log(buttonFooter);
+  const buttonFooter = document.querySelector('.button01');
 
   if (food !== '' && drink !== '' && candy !== '') {
     buttonFooter.classList.add('active');
+  }
+
+}
+
+function showModalOrder() {
+  const selectedModalOrder = document.querySelector('.modalOrder');
+
+  if (food !== '' && drink !== '' && candy !== '') {
+    selectedModalOrder.classList.add('showModal');
   }
 
 }
