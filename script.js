@@ -1,35 +1,77 @@
-function selectedFood(value) {
-  const selectedCard = document.querySelector('.selected'); 
+let food = '';
+let drink = '';
+let candy = '';
 
-  if(selectedCard !== null){
+function selectedFood(elementSelected) {
+
+  const selectedCard = document.querySelector('.selected');
+  const selectedIconOld = document.querySelector('.showIconCheck');
+  const childrenIcon = elementSelected?.childNodes[9];
+
+  if (selectedIconOld !== null) {
+    selectedIconOld.classList.remove('showIconCheck');
+  }
+
+  if (selectedCard !== null) {
     selectedCard.classList.remove('selected');
   }
 
-  const element = document.querySelector(value);
+  elementSelected.classList.add('selected');
+  childrenIcon.classList.add('showIconCheck');
 
-  element.classList.add('selected');
+  food = elementSelected.innerHTML;
+
+  verifyButtonActive();
 }
 
-function selectedDrinks(value) {
-  const selectedCard = document.querySelector('.cardFoodDrinks .selected'); 
+function selectedDrinks(elementSelected) {
+  const selectedCard = document.querySelector('.cardFoodDrinks .selected');
+  const selectedIconOld = document.querySelector('.showIconChecksDrinks');
+  const childrenIcon = elementSelected?.childNodes[9];
 
-  if(selectedCard !== null){
+  if (selectedIconOld !== null) {
+    selectedIconOld.classList.remove('showIconChecksDrinks');
+  }
+
+  if (selectedCard !== null) {
     selectedCard.classList.remove('selected');
   }
 
-  const element = document.querySelector(value);
+  elementSelected.classList.add('selected');
+  childrenIcon.classList.add('showIconChecksDrinks');
 
-  element.classList.add('selected');
+  drink = elementSelected.innerHTML;
+
+  verifyButtonActive();
 }
 
-function selectedCandy(value) {
-  const selectedCard = document.querySelector('.cardFoodCandy .selected'); 
+function selectedCandy(elementSelected) {
+  const selectedCard = document.querySelector('.cardFoodCandy .selected');
+  const selectedIconOld = document.querySelector('.showIconChecksCandy');
+  const childrenIcon = elementSelected?.childNodes[9];
 
-  if(selectedCard !== null){
+  if (selectedIconOld !== null) {
+    selectedIconOld.classList.remove('showIconChecksCandy');
+  }
+
+  if (selectedCard !== null) {
     selectedCard.classList.remove('selected');
   }
 
-  const element = document.querySelector(value);
+  elementSelected.classList.add('selected');
+  childrenIcon.classList.add('showIconChecksCandy');
 
-  element.classList.add('selected');
+  candy = elementSelected.innerHTML;
+
+  verifyButtonActive();
+}
+
+function verifyButtonActive() {
+  const buttonFooter = document.querySelector('.button01') ;
+  console.log(buttonFooter);
+
+  if (food !== '' && drink !== '' && candy !== '') {
+    buttonFooter.classList.add('active');
+  }
+
 }

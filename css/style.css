@@ -13,6 +13,7 @@ body {
 }
 
 .header {
+  max-width: 414px;
   width: 414px;
   height: 92px;
   background-color: #CF2B2B;
@@ -24,6 +25,8 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+
+  z-index: 2;
 }
 
 .header h1 {
@@ -44,6 +47,7 @@ body {
 }
 
 .container {
+  max-width: 414px;
   width: 414px;
 
   margin-top: 123px;
@@ -66,6 +70,7 @@ body {
 .cardFood {
   display: flex;
   overflow-x: scroll;
+  overflow-y: hidden;
 
   margin-bottom: 20px;
 }
@@ -80,12 +85,38 @@ body {
   display: none;
 }
 
+.cardFood .iconCheck {
+  width: 19px;
+  height: 19px;
+  display: none;
+
+  position: absolute;
+  bottom: 3px;
+  right: 4px;
+}
+
+.showIconCheck{
+  display: inline-block !important;
+}
+
+.showIconChecksDrinks{
+  display: inline-block !important;
+}
+
+.showIconChecksCandy{
+  display: inline-block !important;
+}
+
 .card {
   width: 172px;
   height: 216px;
 
+  position: relative;
+
   padding: 14px;
   margin: 0 8px;
+
+  cursor: pointer;
 
   border-radius: 9px;
   background-color: #FFFFFF;
@@ -134,10 +165,11 @@ body {
 }
 
 .selected {
-  border: 3px solid #17be17;
+  border: 3px solid #32B72F;
 }
 
 .footer {
+  max-width: 414px;
   width: 414px;
   height: 92px;
   background-color: #FFFFFF;
@@ -151,7 +183,7 @@ body {
   left: 0;
 }
 
-.footer > div {
+.footer button {
   width: 364px;
   height: 61px;
   border-radius: 50px;
@@ -160,6 +192,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.footer .active {
+  background-color: #32B72F ;
 }
 
 .footer p {
