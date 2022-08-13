@@ -247,13 +247,27 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.buttonConfirmation {
+  border-radius: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #FFFFFF;
+}
+
 .buttonConfirm {
   width: 329px;
   height: 52px;
 
   border: none;
-  border-radius: 100px;
+  text-decoration: none;
   cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .buttonConfirm h4 {
@@ -264,7 +278,6 @@ body {
 
 .buttonCancel {
   width: 329px;
-  height: 43px;
 
   cursor: pointer;
 
